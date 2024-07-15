@@ -181,7 +181,7 @@ const Carosal = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2300,
+    autoplaySpeed: 2000,
     nextArrow: <PrevArrow />,
     prevArrow: <NextArrow />,
     beforeChange: (current, next) => handleSlideChange(next),
@@ -212,7 +212,7 @@ const Carosal = () => {
                 <img
                   src={slide.image}
                   alt={`Slide ${index}`}
-                  className="card-image"
+                  className="card-image animate"
                 />
               </div>
             </div>
@@ -223,16 +223,17 @@ const Carosal = () => {
         <img src="Images/rect.png" className="imag2" alt="decorative" />
       </div>
       {/* Placeholder images with their respective classes */}
-      <img src="Images/l1.png" className="i1" alt="decorative" />
-      <img src="Images/Ellipse 311.png" className="i7" alt="decorative" />
-      <img src="Images/r3.png" className="i2" alt="decorative" />
-      <img src="Images/l2.png" className="i3" alt="decorative" />
-      <img src="Images/r2.png" className="i4" alt="decorative" />
-      <img src="Images/l4.png" className="i5" alt="decorative" />
-      <img src="Images/l3.png" className="i6" alt="decorative" />
-      <img src="Images/l5.png" className="i8" alt="decorative" />
+      <img src="Images/l2.svg" className="i1 animate" alt="decorative" />
+      <img src="Images/r1.svg" className="i7 animate" alt="decorative" />
+      <img src="Images/r3.svg" className="i2 animate" alt="decorative" />
+      <img src="Images/l3.svg" className="i3 animate" alt="decorative" />
+      <img src="Images/r2.svg" className="i4 animate" alt="decorative" />
+      <img src="Images/l5.svg" className="i5 animate" alt="decorative" />
+      <img src="Images/l4.svg" className="i6 animate" alt="decorative" />
+      <img src="Images/l1.svg" className="i8 animate" alt="decorative" />
     </div>
   );
 };
 
 export default Carosal;
+

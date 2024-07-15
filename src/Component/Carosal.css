@@ -225,32 +225,22 @@
 }
  */
  /* Your existing CSS styles */
-
  .animate {
   animation-duration: 1.5s;
-  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
   animation-name: ani;
-  transform-origin: center center;
-  border: 5px solid transparent; /* Default state without border */
-  border-radius: 50%;
+  animation-fill-mode: forwards;
+  opacity: 1; /* Add this */
 }
 
 @keyframes ani {
   0% {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.2);
-   
-  }
-  50% {
-    transform: perspective(1000px) rotateY(10deg) rotateX(10deg) scale(1.4);
-    
-    
+    transform: scale(1.5);
   }
   100% {
-    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.5);
-   
-    
+    transform: scale(1);
   }
 }
+
 
 /* Make sure the image classes are correctly set up */
 
@@ -362,7 +352,7 @@
   .i4,
   .i5,
   .i6,
-  .i7 {
+  .i7 ,i8{
     visibility: hidden;
   }
   .card-image {
