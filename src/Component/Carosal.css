@@ -226,7 +226,35 @@
  */
  /* Your existing CSS styles */
 
- .imag1 {
+ .animate {
+  animation-duration: 1.5s;
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+  animation-name: ani;
+  transform-origin: center center;
+  border: 5px solid transparent; /* Default state without border */
+  border-radius: 50%;
+}
+
+@keyframes ani {
+  0% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.2);
+   
+  }
+  50% {
+    transform: perspective(1000px) rotateY(10deg) rotateX(10deg) scale(1.4);
+    
+    
+  }
+  100% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.5);
+   
+    
+  }
+}
+
+/* Make sure the image classes are correctly set up */
+
+.imag1 {
   position: absolute;
   left: 740px;
   top: 140px;
@@ -317,165 +345,12 @@
   top: 350px;
   left: 868px;
 }
-.i8{
+
+.i8 {
   position: absolute;
   top: 150px;
   left: 250px;
 }
-
-/* Container Perspective */
-.container {
-  perspective: 1000px;
-}
-
-.animate {
-  animation-duration: 2.5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-}
-
-.i1.animate {
-  animation-name: moveToSliderLeft1;
-}
-
-.i3.animate {
-  animation-name: moveToSliderLeft3;
-}
-
-.i5.animate {
-  animation-name: moveToSliderLeft5;
-}
-
-.i6.animate {
-  animation-name: moveToSliderLeft6;
-}
-
-.i2.animate {
-  animation-name: moveToSliderRight2;
-}
-
-.i7.animate {
-  animation-name: moveToSliderRight7;
-}
-
-.i4.animate {
-  animation-name: moveToSliderRight4;
-}
-.i8.animate{
-  animation-name: moveToSliderLeft8;
-}
-
-/* Keyframes for 3D animations */
-@keyframes moveToSliderLeft1 {
-  0% {
-    transform: translateX(0) rotateY(0);
-  }
-  50% {
-    transform: translateX(320px) rotateY(45deg);
-  }
-  100% {
-    transform: translateX(0) rotateY(0);
-    left: 220px;
-    top: 280px;
-  }
-}
-@keyframes moveToSliderRight8 {
-  0% {
-      transform: translateX(0) rotateY(0);
-  }
-  50% {
-      transform: translateX(-320px) rotateY(-45deg);
-  }
-  100% {
-      transform: translateX(0) rotateY(0);
-  }
-}
-
-@keyframes moveToSliderLeft3 {
-  0% {
-    transform: translateX(0) rotateY(0);
-  }
-  50% {
-    transform: translateX(320px) rotateY(45deg);
-  }
-  100% {
-    transform: translateX(0) rotateY(0);
-    left: 868px;
-    top: 150px;
-  }
-}
-
-@keyframes moveToSliderLeft5 {
-  0% {
-    transform: translateX(0) rotateY(0);
-  }
-  50% {
-    transform: translateX(320px) rotateY(45deg);
-  }
-  100% {
-    transform: translateX(0) rotateY(0);
-    left: 141px;
-    top: 150px;
-  }
-}
-
-@keyframes moveToSliderLeft6 {
-  0% {
-    transform: translateX(0) rotateY(0);
-  }
-  50% {
-    transform: translateX(320px) rotateY(45deg);
-  }
-  100% {
-    transform: translateX(0) rotateY(0);
-    left: 890px;
-    top: 250px;
-  }
-}
-
-@keyframes moveToSliderRight2 {
-  0% {
-    transform: translateX(0) rotateY(0);
-  }
-  50% {
-    transform: translateX(-320px) rotateY(-45deg);
-  }
-  100% {
-    transform: translateX(0) rotateY(0);
-    left: 73px;
-    top: 250px;
-  }
-}
-
-@keyframes moveToSliderRight7 {
-  0% {
-    transform: translateX(0) rotateY(0);
-  }
-  50% {
-    transform: translateX(-320px) rotateY(-45deg);
-  }
-  100% {
-    transform: translateX(0) rotateY(0);
-    left: 900px;
-    top: 150px;
-  }
-}
-
-@keyframes moveToSliderRight4 {
-  0% {
-    transform: translateX(0) rotateY(0);
-  }
-  50% {
-    transform: translateX(-320px) rotateY(-45deg);
-  }
-  100% {
-    transform: translateX(0) rotateY(0);
-    left: 868px;
-    top: 350px;
-  }
-}
-
-
 
 @media (min-width: 320px) and (max-width: 460px) {
   .main {
@@ -515,9 +390,6 @@
     position: absolute;
     left: 550px;
     top: 140px;
-  }
-  .imag2 {
-    /* Add any specific styles for medium screens */
   }
   .title {
     margin-left: 200px;

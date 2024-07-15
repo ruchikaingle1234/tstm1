@@ -105,13 +105,14 @@
 //       <div className="image2">
 //         <img src="Images/rect.png" className="imag2" alt="decorative" />
 //       </div>
-//       <img src="Images/Ellipse 314.png" className="i1" alt="decorative"/>
-//       <img src="Images/Ellipse 311.jpg" className="i7" alt="decorative"/>
-//       <img src="Images/Ellipse 312.png" className="i2" alt="decorative"/>
-//       <img src="Images/Ellipse 313.png" className="i3" alt="decorative"/>
-//       <img src="Images/Ellipse 317.png" className="i4" alt="decorative"/>
-//       <img src="Images/Ellipse 316.png" className="i5" alt="decorative"/>
-//       <img src="Images/Ellipse 315.png" className="i6" alt="decorative"/>
+//      <img src="Images/l1.png" className="i1" alt="decorative" />
+      // <img src="Images/Ellipse 311.png" className="i7" alt="decorative" />
+      // <img src="Images/r3.png" className="i2" alt="decorative" />
+      // <img src="Images/l2.png" className="i3" alt="decorative" />
+      // <img src="Images/r2.png" className="i4" alt="decorative" />
+      // <img src="Images/l4.png" className="i5" alt="decorative" />
+      // <img src="Images/l3.png" className="i6" alt="decorative" />
+      // <img src="Images/l5.png" className="i8" alt="decorative" />
 //     </div>
 //   );
 // };
@@ -166,12 +167,8 @@ const Carosal = () => {
       element.classList.remove("animate");
     });
 
-    const nextIndex = (index + 1) % imageClasses.length;
-    const prevIndex = (index - 1 + imageClasses.length) % imageClasses.length;
-
-    document.querySelector(imageClasses[index]).classList.add("animate");
-    document.querySelector(imageClasses[nextIndex]).classList.add("animate");
-    document.querySelector(imageClasses[prevIndex]).classList.add("animate");
+    const currentElement = document.querySelector(imageClasses[index]);
+    if (currentElement) currentElement.classList.add("animate");
   }, [currentSlide, imageClasses]);
 
   const handleSlideChange = (newIndex) => {
@@ -191,14 +188,14 @@ const Carosal = () => {
   };
 
   const slides = [
-    { image: "Images/card1.png" },
-    { image: "Images/card2.png" },
-    { image: "Images/card3.png" },
+    { image: "Images/card7.png" },
     { image: "Images/card4.png" },
     { image: "Images/card5.png" },
+    { image: "Images/card3.png" },
+    { image: "Images/card2.png" },
     { image: "Images/card6.png" },
-    { image: "Images/card7.png" },
     { image: "Images/card8.png" },
+    { image: "Images/card1.png" },
   ];
 
   return (
@@ -239,4 +236,3 @@ const Carosal = () => {
 };
 
 export default Carosal;
-
